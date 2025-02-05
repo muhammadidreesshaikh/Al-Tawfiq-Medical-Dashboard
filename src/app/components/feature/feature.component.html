@@ -1,0 +1,15 @@
+<mat-card class="cardWithShadow overflow-hidden">
+    <mat-card-content class="p-b-0">
+        <div class="m-l-auto">
+            <button mat-fab class="icon-48 bg-secondary ">
+                <i-tabler [name]="data().icon" class="text-white d-flex"></i-tabler>
+            </button>
+        </div>
+        <div class="d-flex align-items-center m-y-8">
+            <mat-card-title>{{data().title}}</mat-card-title>
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="f-s-14 m-l-4">{{data().description}}</div>
+        </div>
+    </mat-card-content>
+</mat-card>

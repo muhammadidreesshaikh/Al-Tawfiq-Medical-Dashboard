@@ -1,0 +1,32 @@
+<div class="row">
+  @for (item of cardsData; track item.id) {
+    <div class="col-lg-3">
+      <app-feature [data]="item"></app-feature>
+    </div>
+  }
+</div>
+
+<div class="row">
+  <div class="col-lg-8">
+    <app-sales-overview></app-sales-overview>
+  </div>
+  <div class="col-lg-4">
+    <app-yearly-breakup></app-yearly-breakup>
+    <app-monthly-earnings></app-monthly-earnings>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-4">
+    <app-recent-transactions></app-recent-transactions>
+  </div>
+  <div class="col-lg-8">
+    <app-product-performance></app-product-performance>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <app-blog-card></app-blog-card>
+  </div>
+</div>
