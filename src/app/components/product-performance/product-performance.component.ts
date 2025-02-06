@@ -9,7 +9,7 @@ export interface performanceData {
   imagePath: string;
   pname: string;
   category: string;
-  sales: string;
+  button: string;
   status: string;
 }
 
@@ -19,7 +19,7 @@ const ELEMENT_DATA: performanceData[] = [
     imagePath: 'assets/images/products/s6.jpg',
     pname: 'Review Patient Demographics CDE Updates',
     category: 'Pending review from Data Governance team - Critical updates for EMR integration',
-    sales: 'Review Now',
+    button: 'Review Now',
     status: 'High Priority',
   },
   {
@@ -27,24 +27,24 @@ const ELEMENT_DATA: performanceData[] = [
     imagePath: 'assets/images/products/s9.jpg',
     pname: 'Laboratory Results Schema Validation',
     category: 'New data quality rules need approval - Affects 3 departments',
-    sales: 'Review Now ',
+    button: 'Validate Schema',
     status: 'Pending Review',
   },
   {
     id: 3,
     imagePath: 'assets/images/products/s7.jpg',
-    pname: 'Red Velvate Dress',
-    category: 'Womens Fashion',
-    sales: 'Review Now',
-    status: 'high',
+    pname: 'Medication Data Standards Update',
+    category: 'Pharmacy department requested urgent review of medication coding standards',
+    button: 'Review Standards',
+    status: 'Escalated',
   },
   {
     id: 4,
     imagePath: 'assets/images/products/s4.jpg',
-    pname: 'Headphone Boat',
-    category: 'Electronics',
-    sales: 'Review Now',
-    status: 'critical',
+    pname: 'Radiology Reporting Templates',
+    category: 'Standardization of reporting templates across imaging modalities',
+    button: 'View Progress',
+    status: 'In Progress',
   },
 ];
 
@@ -64,7 +64,7 @@ interface month {
   templateUrl: './product-performance.component.html',
 })
 export class AppProductPerformanceComponent {
-  displayedColumns: string[] = ['product', 'status', 'sales'];
+  displayedColumns: string[] = ['product', 'status', 'button'];
   dataSource = ELEMENT_DATA;
 
   months: month[] = [
