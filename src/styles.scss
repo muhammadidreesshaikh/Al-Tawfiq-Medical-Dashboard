@@ -12,3 +12,34 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.card-scroll {
+    max-height: 82vh;
+    overflow-y: auto;
+    border-radius: 12px;
+
+    // Scrollbar Styling
+    &::-webkit-scrollbar {
+        width: 8px;
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #f0f0f0;
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 10px;
+        transition: background 0.3s ease-in-out;
+
+        &:hover {
+            background: #555;
+        }
+    }
+
+    // Firefox Scrollbar
+    // scrollbar-width: thin;
+    // scrollbar-color: #888 #f0f0f0;
+}
