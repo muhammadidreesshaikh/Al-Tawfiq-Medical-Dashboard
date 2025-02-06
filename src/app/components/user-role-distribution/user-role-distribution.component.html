@@ -1,7 +1,34 @@
 <mat-card class="cardWithShadow">
     <mat-card-content>
-        <mat-card-title>User Role Distribution</mat-card-title>
+        <mat-card-title class="m-b-16">User Role Distribution</mat-card-title>
 
-        
+        @for (item of contacts; track $index) {
+        <mat-card class="cardWithShadow">
+            <mat-card-content>
+                <div class="d-flex border-bottom">
+                    <div>
+                        <div class="d-flex align-items-center m-y-8">
+                            <mat-card-title>{{item.role}}</mat-card-title>
+                        </div>
+                        @if (item?.name) {
+                            <div class="f-s-14">
+                                <span class="bg-light-primary text-primary rounded f-w-600 p-6 p-y-4 f-l-12">
+                                    {{ item.name }}
+                                </span>
+                            </div>
+                        }
+                        @if (item?.email) {
+                            <div class="f-s-14 m-t-8">
+                                <span class="bg-light-success text-success rounded f-w-600 p-6 p-y-4 f-s-12">
+                                    {{ item.email }}
+                                </span>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+        }
+
     </mat-card-content>
 </mat-card>
