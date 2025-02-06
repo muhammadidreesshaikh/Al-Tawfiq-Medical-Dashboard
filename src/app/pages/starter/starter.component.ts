@@ -1,27 +1,23 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { MaterialModule } from '../../material.module';
-// import { AppSalesOverviewComponent } from 'src/app/components/sales-overview/sales-overview.component';
-// import { AppYearlyBreakupComponent } from 'src/app/components/yearly-breakup/yearly-breakup.component';
-// import { AppMonthlyEarningsComponent } from 'src/app/components/monthly-earnings/monthly-earnings.component';
-// import { AppRecentTransactionsComponent } from 'src/app/components/recent-transactions/recent-transactions.component';
 import { AppProductPerformanceComponent } from 'src/app/components/product-performance/product-performance.component';
-// import { AppBlogCardsComponent } from 'src/app/components/blog-card/blog-card.component';
 import { FeatureComponent } from 'src/app/components/feature/feature.component';
 import { PlatformOverviewComponent } from "../../components/platform-overview/platform-overview.component";
+import { RecentActivitiesComponent } from "../../components/recent-activities/recent-activities.component";
+import { UserRoleDistributionComponent } from "../../components/user-role-distribution/user-role-distribution.component";
+import { RelevantInformationComponent } from "../../components/relevant-information/relevant-information.component";
 
 
 @Component({
   selector: 'app-starter',
   imports: [
     MaterialModule,
-    // AppSalesOverviewComponent,
-    // AppYearlyBreakupComponent,
-    // AppMonthlyEarningsComponent,
-    // AppRecentTransactionsComponent,
     AppProductPerformanceComponent,
-    // AppBlogCardsComponent,
     FeatureComponent,
-    PlatformOverviewComponent
+    PlatformOverviewComponent,
+    RecentActivitiesComponent,
+    UserRoleDistributionComponent,
+    RelevantInformationComponent
 ],
   templateUrl: './starter.component.html',
   encapsulation: ViewEncapsulation.None,
