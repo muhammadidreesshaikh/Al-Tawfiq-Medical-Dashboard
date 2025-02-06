@@ -1,7 +1,35 @@
 <mat-card class="cardWithShadow">
     <mat-card-content>
-        <mat-card-title>Recent Activities</mat-card-title>
+        <mat-card-title class="m-b-16">Recent Activities</mat-card-title>
 
-        
+        @for (item of updates; track $index) {
+        <mat-card class="cardWithShadow">
+            <mat-card-content>
+                <div class="d-flex border-bottom">
+                    <div>
+                        <button mat-fab class="icon-48 bg-light-success ">
+                            <i-tabler [name]="item.action" class="text-success d-flex"></i-tabler>
+                        </button>
+                    </div>
+                    <div class="m-l-16">
+                        <div class="d-flex align-items-center m-y-8">
+                            <mat-card-title>{{item.name}}</mat-card-title>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="f-s-14">
+                                <span class="bg-light-success text-success rounded f-w-600 p-6 p-y-4 f-s-12">
+                                    {{ item.timeAgo }}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p class="m-b-0 f-s-14 text-dark">{{item.description}}</p>
+                </div>
+            </mat-card-content>
+        </mat-card>
+        }
+
     </mat-card-content>
 </mat-card>
