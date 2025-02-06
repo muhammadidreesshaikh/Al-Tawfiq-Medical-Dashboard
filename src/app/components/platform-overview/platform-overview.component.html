@@ -4,31 +4,33 @@
 
         @for (item of cardsData; track $index) {
             <mat-card class="cardWithShadow overflow-hidden m-t-20">
-                <mat-card-content class="p-b-0">
-                    <!-- <div class="m-l-auto">
-                        <button mat-fab class="icon-48 bg-secondary ">
-                            <i-tabler [name]="item.icon" class="text-white d-flex"></i-tabler>
-                        </button>
-                    </div>
-                    <div class="d-flex align-items-center m-y-8">
-                        <mat-card-title>{{item.title}}</mat-card-title>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <div class="f-s-14 m-l-4">{{item.description}}</div>
-                    </div> -->
-
-                    <div class="d-flex">
-                        <div class="m-r-15 d-flex align-items-center">
-                            <button mat-fab class="icon-48 bg-secondary ">
-                                <i-tabler [name]="item.icon" class="text-white d-flex"></i-tabler>
-                            </button>
+                <!-- <mat-card-content class="p-b-0"> -->
+                    <div class="p-20">
+                        <!-- <div class="m-l-auto">
+                                            <button mat-fab class="icon-48 bg-secondary ">
+                                                <i-tabler [name]="item.icon" class="text-white d-flex"></i-tabler>
+                                            </button>
+                                        </div>
+                                        <div class="d-flex align-items-center m-y-8">
+                                            <mat-card-title>{{item.title}}</mat-card-title>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="f-s-14 m-l-4">{{item.description}}</div>
+                                        </div> -->
+                    
+                        <div class="d-flex">
+                            <div class="m-r-15 d-flex align-items-center">
+                                <button mat-fab class="icon-48 bg-secondary ">
+                                    <i-tabler [name]="item.icon" class="text-white d-flex"></i-tabler>
+                                </button>
+                            </div>
+                            <div class="">
+                                <mat-card-title>{{item.title}}</mat-card-title>
+                                <div class="f-s-14 p-t-5 custom-text-truncate">{{item.description}}</div>
+                            </div>
                         </div>
-                        <div class="">
-                            <mat-card-title>{{item.title}}</mat-card-title>
-                            <div class="f-s-14 p-t-5">{{item.description}}</div>
-                        </div>
                     </div>
-                </mat-card-content>
+                <!-- </mat-card-content> -->
             </mat-card>
         }
 

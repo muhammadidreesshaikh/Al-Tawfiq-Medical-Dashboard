@@ -5,3 +5,10 @@ body {
     height: 100%;
     margin: 0;
 }
+
+.custom-text-truncate{
+    white-space: nowrap;
+    width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

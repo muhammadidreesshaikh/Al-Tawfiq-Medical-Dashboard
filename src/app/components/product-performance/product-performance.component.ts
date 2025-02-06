@@ -9,8 +9,7 @@ export interface performanceData {
   imagePath: string;
   pname: string;
   category: string;
-  progress: number;
-  sales: number;
+  sales: string;
   status: string;
 }
 
@@ -18,28 +17,25 @@ const ELEMENT_DATA: performanceData[] = [
   {
     id: 1,
     imagePath: 'assets/images/products/s6.jpg',
-    pname: 'Gaming Console',
-    category: 'Electronics',
-    progress: 78.5,
-    sales: 3.9,
-    status: 'low',
+    pname: 'Review Patient Demographics CDE Updates',
+    category: 'Pending review from Data Governance team - Critical updates for EMR integration',
+    sales: 'Review Now',
+    status: 'High Priority',
   },
   {
     id: 2,
     imagePath: 'assets/images/products/s9.jpg',
-    pname: 'Leather Purse',
-    category: 'Fashion',
-    progress: 58.6,
-    sales: 3.5,
-    status: 'medium',
+    pname: 'Laboratory Results Schema Validation',
+    category: 'New data quality rules need approval - Affects 3 departments',
+    sales: 'Review Now ',
+    status: 'Pending Review',
   },
   {
     id: 3,
     imagePath: 'assets/images/products/s7.jpg',
     pname: 'Red Velvate Dress',
     category: 'Womens Fashion',
-    progress: 25,
-    sales: 3.8,
+    sales: 'Review Now',
     status: 'high',
   },
   {
@@ -47,8 +43,7 @@ const ELEMENT_DATA: performanceData[] = [
     imagePath: 'assets/images/products/s4.jpg',
     pname: 'Headphone Boat',
     category: 'Electronics',
-    progress: 96.3,
-    sales: 3.54,
+    sales: 'Review Now',
     status: 'critical',
   },
 ];
@@ -69,7 +64,7 @@ interface month {
   templateUrl: './product-performance.component.html',
 })
 export class AppProductPerformanceComponent {
-  displayedColumns: string[] = ['product', 'progress', 'status', 'sales'];
+  displayedColumns: string[] = ['product', 'status', 'sales'];
   dataSource = ELEMENT_DATA;
 
   months: month[] = [
